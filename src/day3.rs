@@ -28,9 +28,8 @@ pub fn part2(input: &str) -> u64 {
             for y in (1..=12).rev() {
                 prefixes[y] = prefixes[y].max(prefixes[y - 1] * 10 + c);
             }
-            prefixes[0] = prefixes[0].max(c);
         }
-        sum += prefixes[11];
+        sum += prefixes[12];
     }
     sum
 }
